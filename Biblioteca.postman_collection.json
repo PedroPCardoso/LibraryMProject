@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "e16e19ba-1343-49f9-835e-ebf883a26b7d",
+		"name": "Biblioteca",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Criando Emprestimo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/emprestimo?user_id=3&livro_id=4&data_inicio=2022-04-16 01:58:46",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"emprestimo"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "3"
+						},
+						{
+							"key": "livro_id",
+							"value": "4"
+						},
+						{
+							"key": "data_inicio",
+							"value": "2022-04-16 01:58:46"
+						},
+						{
+							"key": "data_fim",
+							"value": "2022-04-19 01:58:46",
+							"disabled": true
+						},
+						{
+							"key": "data_da_devolucao",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Devolvendo Livro",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/emprestimo/6",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"emprestimo",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtendo todos os emprestimos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/emprestimo?user_id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"emprestimo"
+					],
+					"query": [
+						{
+							"key": "livro_id",
+							"value": "4",
+							"disabled": true
+						},
+						{
+							"key": "user_id",
+							"value": "1"
+						},
+						{
+							"key": "status",
+							"value": "3",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
